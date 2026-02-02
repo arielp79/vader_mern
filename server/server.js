@@ -29,4 +29,9 @@ app.post('/guardar-consulta', async (req, res) => {
     }
 });
 
-app.listen(3000, () => console.log("🚀 Servidor escuchando en el puerto 3000"));
+// Usar el puerto que asigne Render o el 3001 por defecto si es local
+const PORT = process.env.PORT || 3001; 
+
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`🚀 Servidor escuchando en el puerto ${PORT}`);
+});
