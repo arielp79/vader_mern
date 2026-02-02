@@ -71,7 +71,7 @@ function App() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch('https://vader-server.onrender.com', {
+            const res = await fetch('https://vader-server.onrender.com/guardar-consulta', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
