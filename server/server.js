@@ -21,21 +21,10 @@ const Consulta = mongoose.model('Consulta', new mongoose.Schema({
 
 app.post('/guardar-consulta', async (req, res) => {
     try {
-        console.log("Datos recibidos:", req.body); // ESTO ES CLAVE: Mirá los logs de Render para ver qué llega
-        
-        // Si req.body llega vacío o mal, esto fallará. 
-        // Vamos a forzar que cree algo aunque falten campos:
-        const nueva = new Consulta({
-            nombre: req.body.nombre || req.body.name || "Sin nombre",
-            correo: req.body.correo || req.body.email || "Sin correo",
-            mensaje: req.body.mensaje || req.body.message || "Sin mensaje"
-        });
-
+        const nueva = new Consulta(req.body);
         await nueva.save();
-        console.log("✅ Guardado en Mongo con éxito");
         res.status(200).send("OK");
     } catch (e) {
-        console.error("❌ Error al guardar:", e.message);
         res.status(500).send(e.message);
     }
 });
