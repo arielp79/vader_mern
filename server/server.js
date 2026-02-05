@@ -29,9 +29,14 @@ app.post('/guardar-consulta', async (req, res) => {
     }
 });
 
-// Usar el puerto que asigne Render o el 3001 por defecto si es local
-const PORT = process.env.PORT || 3001; 
+const PORT = process.env.PORT || 10000;
 
+// Esto tiene que estar LIBRE, no adentro de ningún .then()
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`🚀 Servidor escuchando en el puerto ${PORT}`);
 });
+
+// La conexión va por separado
+mongoose.connect(process.env.MONGO_URI)
+    .then(() => console.log("✅ ¡LOGRADO! Conectado a MongoDB Atlas"))
+    .catch(err => console.error("❌ ERROR:", err));
