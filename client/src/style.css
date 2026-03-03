@@ -243,12 +243,11 @@ footer p strong {
     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
 }
 
-/* El icono de WhatsApp antes del texto (usando FontAwesome) */
-.btn-whatsapp::before {
-    content: '\f232'; /* Código de WhatsApp en FontAwesome */
-    font-family: "Font Awesome 5 Brands";
+/* Icono dentro del botón (Font Awesome) */
+.btn-whatsapp i {
     margin-right: 12px;
     font-size: 1.5rem;
+    line-height: 1;
 }
 
 .footer-bottom {

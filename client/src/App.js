@@ -35,23 +35,23 @@ function App() {
     }, []);
 
     const trabajos = [
-        { 
-            id: 'tinglado', 
-            titulo: 'Tinglado', 
-            imgPrincipal: 'imagenes/tinglado-final.jpg', 
-            fotos: ['imagenes/tinglado-final.jpg', 'imagenes/tinglado-proceso1.jpg', 'imagenes/tinglado-proceso2.jpg', 'imagenes/tinglado-proceso3.jpg', 'imagenes/tinglado-proceso4.jpg'] 
+        {
+            id: 'tinglado',
+            titulo: 'Tinglado',
+            imgPrincipal: 'imagenes/tinglado-final.jpg',
+            fotos: ['imagenes/tinglado-final.jpg', 'imagenes/tinglado-proceso1.jpg', 'imagenes/tinglado-proceso2.jpg', 'imagenes/tinglado-proceso3.jpg', 'imagenes/tinglado-proceso4.jpg']
         },
-        { 
-            id: 'reja', 
-            titulo: 'Reja', 
-            imgPrincipal: 'imagenes/reja-final.jpg', 
-            fotos: ['imagenes/reja-final.jpg', 'imagenes/reja-proceso1.jpg', 'imagenes/reja-proceso2.jpg', 'imagenes/reja-proceso3.jpg', 'imagenes/reja-proceso4.jpg', 'imagenes/reja-proceso5.jpg'] 
+        {
+            id: 'reja',
+            titulo: 'Reja',
+            imgPrincipal: 'imagenes/reja-final.jpg',
+            fotos: ['imagenes/reja-final.jpg', 'imagenes/reja-proceso1.jpg', 'imagenes/reja-proceso2.jpg', 'imagenes/reja-proceso3.jpg', 'imagenes/reja-proceso4.jpg', 'imagenes/reja-proceso5.jpg']
         },
-        { 
-            id: 'muebles', 
-            titulo: 'muebles', 
-            imgPrincipal: 'imagenes/mueble-final.jpg', 
-            fotos: ['imagenes/mueble-final.jpg', 'imagenes/mueble-proceso1.jpg', 'imagenes/mueble-proceso2.jpg'] 
+        {
+            id: 'muebles',
+            titulo: 'muebles',
+            imgPrincipal: 'imagenes/mueble-final.jpg',
+            fotos: ['imagenes/mueble-final.jpg', 'imagenes/mueble-proceso1.jpg', 'imagenes/mueble-proceso2.jpg']
         }
     ];
 
@@ -62,9 +62,9 @@ function App() {
     const cambiarFoto = (dir, e) => {
         e.stopPropagation();
         const total = visor.fotos.length;
-        setVisor({ 
-            ...visor, 
-            indice: (visor.indice + dir + total) % total 
+        setVisor({
+            ...visor,
+            indice: (visor.indice + dir + total) % total
         });
     };
 
@@ -94,13 +94,13 @@ function App() {
             <Galeria trabajos={trabajos} setVisor={setVisor} />
             <Instagram />
             <Cobertura />
-            <Contacto formData={formData} handleChange={handleChange} handleSubmit={handleSubmit}/>
+            <Contacto formData={formData} handleChange={handleChange} handleSubmit={handleSubmit} />
             <Footer />
             <WhatsApp />
-            <Visor visor={visor} setVisor={setVisor} cambiarFoto={cambiarFoto}/>
+            <Visor visor={visor} setVisor={setVisor} cambiarFoto={cambiarFoto} />
 
-           
-            
+
+
         </div>
     );
 }
