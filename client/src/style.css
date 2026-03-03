@@ -243,13 +243,13 @@ footer p strong {
     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
 }
 
-/* Icono dentro del botón (SVG inline) */
+/* Icono dentro del botón (igual que el flotante, pero más grande) */
 .btn-whatsapp-icon {
     margin-right: 12px;
-    width: 24px;
-    height: 24px;
+    width: 48px;
+    height: 48px;
     display: inline-block;
-    fill: white;
+    flex-shrink: 0;
 }
 
 .footer-bottom {
