@@ -244,10 +244,13 @@ footer p strong {
 }
 
 /* Icono dentro del botón (Font Awesome) */
-.btn-whatsapp i {
+.btn-whatsapp-icon {
     margin-right: 12px;
     font-size: 1.5rem;
     line-height: 1;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
 }
 
 .footer-bottom {

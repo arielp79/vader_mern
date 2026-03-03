@@ -5,7 +5,14 @@ const Instagram = () => {
           <img src="/imagenes/instagram.png" alt="Instagram" className="icono-flotante"/>                  
           <h2>¿Querés ver nuestros últimos trabajos?</h2>
           <p>Subimos fotos reales todos los días.</p>
-          <a href="https://www.instagram.com/vaderservicios" target="_blank" rel="noopener" className="btn-instagram">@VADERSERVICIOS</a>
+          <a
+            href="https://www.instagram.com/vaderservicios"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-instagram"
+          >
+            @VADERSERVICIOS
+          </a>
       </div>
     </section>
   );

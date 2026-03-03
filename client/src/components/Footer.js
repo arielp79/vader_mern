@@ -9,7 +9,12 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <i className="fab fa-whatsapp" aria-hidden="true"></i>
+                    <img
+                        className="btn-whatsapp-icon"
+                        src="https://logo.svgcdn.com/logos/whatsapp.svg"
+                        alt=""
+                        aria-hidden="true"
+                    />
                     WhatsApp
                 </a>
             </div>
